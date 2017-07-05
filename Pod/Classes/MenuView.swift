@@ -81,7 +81,7 @@ open class MenuView: UIScrollView {
     
     // MARK: - Lifecycle
     internal init(menuOptions: MenuViewCustomizable) {
-        super.init(frame: CGRect(x: 0, y: 0, width: 0, height: menuOptions.height))
+        super.init(frame: CGRect(x: 0, y: menuOptions.marginTop, width: 0, height: menuOptions.height))
         
         self.menuOptions = menuOptions
         
