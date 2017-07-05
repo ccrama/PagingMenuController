@@ -12,6 +12,7 @@ public protocol MenuViewCustomizable {
     var backgroundColor: UIColor { get }
     var selectedBackgroundColor: UIColor { get }
     var height: CGFloat { get }
+    var marginTop: CGFloat { get }
     var animationDuration: TimeInterval { get }
     var deceleratingRate: CGFloat { get }
     var selectedItemCenter: Bool { get }
