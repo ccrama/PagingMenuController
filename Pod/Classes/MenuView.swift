@@ -43,10 +43,11 @@ open class MenuView: UIScrollView {
         default: return false
         }
     }
-    fileprivate var contentOffsetX: CGFloat {
+        fileprivate var contentOffsetX: CGFloat {
         switch menuOptions.displayMode {
         case .standard(_, let centerItem, _) where centerItem:
             return centerOfScreenWidth
+        // added below case
         case .standard(_, let centerItem, _) where !centerItem:
             if self.contentView.frame.width < self.frame.width {
                 return contentOffset.x
@@ -61,6 +62,7 @@ open class MenuView: UIScrollView {
             return contentOffsetXForCurrentPage
         }
     }
+
     fileprivate var centerOfScreenWidth: CGFloat {
         let screenWidth: CGFloat
         if let width = UIApplication.shared.keyWindow?.bounds.width {
