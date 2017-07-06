@@ -186,9 +186,9 @@ open class MenuView: UIScrollView {
     
     fileprivate func layoutScrollView() {
         let viewsDictionary = ["menuView": self]
-        let metrics = ["height": menuOptions.height]
+        let metrics = ["height": menuOptions.height, "margin": menuOptions.marginTop]
         NSLayoutConstraint.activate(
-            NSLayoutConstraint.constraints(withVisualFormat: "V:[menuView(height)]", options: [], metrics: metrics, views: viewsDictionary)
+            NSLayoutConstraint.constraints(withVisualFormat: "V:|-(margin)-[menuView(height)]", options: [], metrics: metrics, views: viewsDictionary)
         )
     }
     
